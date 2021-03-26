@@ -3,6 +3,8 @@
 # Week 4 
 
 Run
- 
-npm install 
+
+```
+npm install
 expo start
+```

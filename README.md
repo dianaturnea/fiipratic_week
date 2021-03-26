@@ -3,5 +3,5 @@
 Week 4 
 
 Run
-#npm install 
-#expo start
+# npm install 
+# expo start

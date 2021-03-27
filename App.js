@@ -20,10 +20,12 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: "#d35400",
-    second: '',
+    primary: "#2c3e50",
+    secondary: "#2c3e50",
+    whiteClouds: "#ecf0f1",
+    silver: "#bdc3c7",
     background: "rgb(242, 242, 242)",
-    card: "rgb(255, 255, 255)",
+    card: "#8e44ad",
     text: "rgb(28, 28, 30)",
     border: "rgb(199, 199, 204)",
     notification: "rgb(255, 69, 58)",
@@ -32,7 +34,7 @@ const MyTheme = {
 
 export default function App() {
   return (
-    <NavigationContainer style={{ backgroundColor: "#d35400" }} theme={MyTheme}>
+    <NavigationContainer style={{ backgroundColor: MyTheme.colors.secondary }} theme={MyTheme}>
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -54,9 +56,9 @@ export default function App() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: "tomato",
-          inactiveTintColor: "gray",
-          backgroundColor: "pink",
+          activeTintColor: MyTheme.colors.whiteClouds,
+          inactiveTintColor: MyTheme.colors.silver,
+          backgroundColor: MyTheme.colors.whiteClouds,
         }}
       >
         <Tab.Screen name="Dashboard" component={DashboardScreen} />

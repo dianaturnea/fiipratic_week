@@ -1,17 +1,14 @@
-import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import React from "react";
+import { StyleSheet, View } from "react-native";
 
 const Spacer = () => {
-    return (
-        <View style={styles.spacer}>
-        </View>
-    )
-}
+  return <View style={styles.spacer}></View>;
+};
 
-export default Spacer
+export default Spacer;
 
 const styles = StyleSheet.create({
-    spacer: {
-        height: 15
-    }
-})
+  spacer: {
+    height: 30,
+  },
+});

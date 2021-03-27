@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 import "react-native-gesture-handler";
 
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
@@ -10,9 +10,11 @@ import {
   ListScreen,
   SettingsScreen,
   ComponentsScreen,
+  Exemple1,
+  Exemple2,
+  Exemple3,
 } from "./src/screens";
 import Ionicons from "react-native-vector-icons/Ionicons";
-
 
 const Tab = createBottomTabNavigator();
 
@@ -20,7 +22,7 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: "#2c3e50",
+    primary: "#1abc9c",
     secondary: "#2c3e50",
     whiteClouds: "#ecf0f1",
     silver: "#bdc3c7",
@@ -34,7 +36,10 @@ const MyTheme = {
 
 export default function App() {
   return (
-    <NavigationContainer style={{ backgroundColor: MyTheme.colors.secondary }} theme={MyTheme}>
+    <NavigationContainer
+      style={{ backgroundColor: MyTheme.colors.secondary }}
+      theme={MyTheme}
+    >
       <Tab.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
@@ -68,12 +73,15 @@ export default function App() {
           name="Components"
           component={ComponentsScreen}
           options={{
-            tabBarBadge: 2,
-            tabBarBadgeStyle: { backgroundColor: "rgb(242, 242, 242)" },
+            tabBarBadge: 20,
+            tabBarBadgeStyle: { backgroundColor: DefaultTheme.colors.card },
           }}
         />
 
         <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Exemple1" component={Exemple1} />
+        <Tab.Screen name="Exemple2" component={Exemple2} />
+        <Tab.Screen name="Exemple3" component={Exemple3} />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -82,8 +90,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

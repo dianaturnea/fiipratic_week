@@ -1,19 +1,16 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
 import { DefaultTheme } from "@react-navigation/native";
 import { useTheme } from "@react-navigation/native";
 
-
-const MyCustomText = ({ type , children}) => {
-    const { colors } = useTheme();
-  const stylesProps = {colors};
+const MyCustomText = ({ type, children, label, text }) => {
+  const { colors } = useTheme();
+  const stylesProps = { colors };
   return (
     <View>
       {type !== "" && (
-        <Text style={[styles(stylesProps)[type]]}>
-          {children}
-        </Text>
+        <Text style={[styles(stylesProps)[type]]}>{children}</Text>
       )}
     </View>
   );
@@ -25,7 +22,6 @@ const styles = (props) =>
   StyleSheet.create({
     h1: {
       fontSize: 24,
-      color: DefaultTheme.primary,
       marginTop: 5,
       marginBottom: 5,
       marginLeft: 0,

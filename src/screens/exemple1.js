@@ -1,11 +1,12 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { ScreenContainer } from "./../components";
 
 const exemple1 = () => {
   return (
-    <View>
+    <ScreenContainer>
       <Text>exemple1</Text>
-    </View>
+    </ScreenContainer>
   );
 };
 

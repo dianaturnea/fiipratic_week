@@ -22,7 +22,7 @@ const MyTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: "#1abc9c",
+    primary: "#8e44ad",
     secondary: "#2c3e50",
     whiteClouds: "#ecf0f1",
     silver: "#bdc3c7",
